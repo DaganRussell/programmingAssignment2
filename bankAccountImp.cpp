@@ -10,7 +10,8 @@ using namespace std;
 bankAccount::bankAccount(int acctNumber, double bal) 
 {
   //assign member variables to the parameter
-
+    accountNumber = acctNumber;
+    balance = bal;
 }
 
 void bankAccount::setAccountNumber(int acct) 
@@ -21,6 +22,7 @@ void bankAccount::setAccountNumber(int acct)
 int bankAccount::getAccountNumber() const
 {
   //return account number
+    return accountNumber;
 }
 
 double bankAccount::getBalance() const
@@ -29,7 +31,7 @@ double bankAccount::getBalance() const
 }
 
 // withdraw member function definitions
-
+void bankAccount::withdraw(double amount) 
 {
 	balance = balance - amount;
 }
@@ -37,6 +39,7 @@ double bankAccount::getBalance() const
 void bankAccount::deposit(double amount)
 {
 	// equations for depositing balance
+    balance = balance + amount;
 }
 
 void bankAccount::print() const

@@ -35,11 +35,11 @@ void savingsAccount::postInterest()
 {
 
  // equation for post interest
-.......................................
+
 }
 
 void savingsAccount::print() const
 {
    // print the account information(account number and balance)
-   ............................................................
+   
 }

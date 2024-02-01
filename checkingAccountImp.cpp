@@ -9,10 +9,9 @@ using namespace std;
 
 checkingAccount::checkingAccount(int acctNumber, double bal, 
                                  double minBal, double intRate, double servC)
-               : 
-               
-               // get the account number and balance from the base class........................
 {
+    accountNumber = acctNumber;
+    balance = bal;
     interestRate = intRate;
     minimumBalance = minBal;
     serviceCharge = servC;
@@ -26,7 +25,8 @@ double checkingAccount::getMinimumBalance() const
 void checkingAccount::setMinimumBalance(double minBalance)
 {
     // set the minimum balance with the parameters
-.........
+    minimumBalance = minBalance;
+
 }
 
 double checkingAccount::getInterestRate() const
@@ -40,7 +40,7 @@ void checkingAccount::setInterestRate(double intRate)
 }
 
 // declare the getter function for service charge
-.................................................
+double checkingAccount :: getServiceCharge() const
 {
     return serviceCharge;
 }
@@ -51,7 +51,7 @@ void checkingAccount::setServiceCharge(double servC)
 }
 
 // define the void post interest function
-.........................................
+void checkingAccount::postInterest()
 {
     balance = balance + balance * interestRate;
 }
@@ -69,8 +69,8 @@ bool checkingAccount::verifyMinimumumBalance(double amount)
 void checkingAccount::withdraw(double amount)
 {
 // verify if the balance less than minimum balance
-hints balance = balance - amount - service charge
-................................................
+    balance = balance - amount - serviceCharge;
+
 }
 
 void checkingAccount::print() const
